@@ -136,8 +136,8 @@ class ForcePlate:
                           (moments - np.cross(forces, -cop)).transpose()).transpose()
 
     def get_reference_frame(self):
-        x = self.corners[1, :] - self.corners[0, :]
-        y = self.corners[3, :] - self.corners[0, :]
+        x = self.corners[0, :] - self.corners[1, :]
+        y = self.corners[0, :] - self.corners[3, :]
         z = np.cross(x, y)
         y = np.cross(z, x)
         x = x / np.linalg.norm(x)

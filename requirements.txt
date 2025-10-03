@@ -1,2 +1,3 @@
 pupyC3D
 numpy
+scipy
